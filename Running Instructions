@@ -1,0 +1,5 @@
+The main file to be run is Classifier.py.
+Before starting the execution of Classifier.py :
+Keep all three files in the same folder.
+Make sure the data files are named as 'user-0'....'user-99'
+Enter the path of the data files and the path of the Features.csv file in the program.
