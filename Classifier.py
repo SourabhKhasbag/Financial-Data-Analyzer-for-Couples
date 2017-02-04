@@ -9,7 +9,7 @@ targetwords = ['sporting', 'nfl', 'nba', 'negative', 'overdraft', 'brewery', 'wi
                'groceries', 'bar', 'club', 'divorce', 'wedding']
 #the final attributes of the user to be targeted
 Headinglist = ['UID', 'Income', 'Expense', 'Student', 'Married', 'Divorced', 'Pets', 'Intellectual', 'Geeky',
-               'ArtLover', 'CoffeeLover', 'PartyPerson', 'Tardy', 'HealthFreak', 'Bibulious', 'MusicLover']
+               'ArtLover', 'CoffeeLover', 'PartyPerson', 'Tardy', 'HealthFreak', 'Bibulious', 'MusicLover','Sports']
 
 
 def startclassifer(path,outputPath):
