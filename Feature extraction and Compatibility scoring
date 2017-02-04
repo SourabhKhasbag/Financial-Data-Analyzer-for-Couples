@@ -1,0 +1,59 @@
+The following keyords are mapped to the mentioned Features:
+Keyword:Course,Education,Lessons 
+Features:Student
+Keywords:book,Museum,Library
+Features:Intelletual
+keyword:Pet,Pets
+Features:PetOwner
+Keyword:Gym
+Features:HealthFreak
+Keyword:Club 
+Features: PartyPerson
+Keyword:Late,Negative,Overdraft
+Features: Turdy
+Keyword:Divorce
+Features: Divorced
+Keyword:Art
+Features: ArtLover
+Keyword:Star,ThinkGeek
+Features: Geeky 
+Keyword:Concert,Music 
+Features: MusicLover
+Keyword:Wine,Brewery,Bar
+Features: Bibulious
+Keyword:Coffee
+Feature:CoffeeLover
+Keyword:NFL,NBA,soprting
+Features:Sports
+
+
+The outputfile'Features.csv' contains 2 types of Output values.
+Values that are Fact-Based(Student,Married,Divorced): Such values are represented as boolean(1-Yes,0-No)
+Values which are Quantifiable(ExIncome,Expense,ArtLover,MusicLover..all others except the ones mentioned above)
+These values are represnted using numbers: The numbers denote the total expenses occured in that category.
+
+
+To find the compatibility of a 2 individuals I hvae undertaken the following methodology:
+The Features are divided into 3 classes:
+Maximum priority(default value):['Income','Expense','Divorced',"Student",'Married']
+These features have a higher weightage as compared with others. Therefore they get the maximum priority while computing the score.
+Medium priority(default value):[]
+These features have lesser weightage as compared with others. Therefore they get the medium priority while computing the score.
+Lowest priority(default value):'PartyPerson','Pets','Tardy','HealthFreak','Bibulious','Intellectual','ArtLover','Geeky','Sports','MusicLover','CoffeeLover'
+These features have lowest weightage as compared with others. Therefore they get the lowest priority while computing the score.
+
+Before computing the actual score the values are quantified:
+Quantification analysis:
+The importance of a particular Feature in a person's life can be attributed to the frequncey of that Freature(read transaction) and
+the total amount of transaction.
+Step 1 :
+A score for every Feature is calculated by mapping the amount spent on a particular Feature to a percentage based on the total expense of the user.
+(Total money spent of Feature/Total Expense of user)*100
+Such a score is calculated for both the users
+Step2:
+The difference between each Feature score of the users is calculated .(ex user1(feature1Score)-user2(feature1Score))
+Step 3:
+The value from Step 2 is multipled with the assocoiated weigth of the particular Feature(exWeight[Feature]*difference)
+The value is then mapped between 0-1 by simply dividing by the maximum possible answer
+
+The program has been written in such a way that in future an user may be asked for his priority in Features
